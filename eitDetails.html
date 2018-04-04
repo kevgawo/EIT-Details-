@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-guide-concepts-1-production</title>
+  
+
+  <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+  
+
+  
+</head>
+<body >
+  <div ng-app ng-init="firstName;lastName">
+  <b>MEST EIT:</b>
+  <div>
+    First Name: <input type="text" min="0" placeholder= "first name"ng-model="firstName">
+  </div>
+  <div>
+    Last Name: <input type="text" min="0"placeholder="last name" ng-model="lastName">
+  </div>
+  <div>
+    Date of Birth: <input type="date" min="0"  ng-model="DOB">
+  </div>
+  <div>
+    <input type="radio" ng-model="gender"value="Male" > Male<br>
+    <input type="radio" ng-model="gender" value="Female" > Female<br>
+  </div><br>
+  <div>
+    <b>EIT DETAILS</b><br>
+    <b>First Name:</b> {{firstName | uppercase}}<br>
+    <b>Last Name:</b> {{lastName| uppercase}}<br>
+    <b>Gender:</b> {{gender}}<br>
+    <b>DOB:</b> {{DOB|date}}<br>
+    <b>Age:</b> {{DOB>0?2018 -(DOB| date :"yyyy"):"enter DOB"}}<br>
+    
+  </div>
+  
+</div>
+</body>
+</html>
